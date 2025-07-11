@@ -1,4 +1,3 @@
-import React from 'react';
 import { Patient, VitalSigns } from '../types';
 import { predictHealthRisk } from '../lib/ai-prediction';
 

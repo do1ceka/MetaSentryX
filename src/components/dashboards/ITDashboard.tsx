@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Shield, AlertTriangle, Activity, Server, Play, FileText, Eye, Lock } from 'lucide-react';
 import { SystemLog, SecurityEvent } from '../../types';
 import { mockLogs, mockSecurityEvents } from '../../lib/mock-data';

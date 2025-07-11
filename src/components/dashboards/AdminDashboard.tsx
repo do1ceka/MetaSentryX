@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Users, Activity, Shield, TrendingUp, Settings, UserPlus, Database, Globe } from 'lucide-react';
 import { User, SystemLog } from '../../types';
 import { mockUsers, mockLogs } from '../../lib/mock-data';

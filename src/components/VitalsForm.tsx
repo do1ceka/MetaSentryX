@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Patient, VitalSigns } from '../types';
 import { X } from 'lucide-react';
 

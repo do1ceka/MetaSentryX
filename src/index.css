@@ -5,7 +5,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-gray-700;
   }
   body {
     @apply bg-gray-900 text-cyan-100 font-mono;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Activity, Users, TrendingUp, AlertTriangle, Plus, FileText } from 'lucide-react';
 import { VitalSigns, Patient } from '../../types';
 import { mockPatients, mockVitals } from '../../lib/mock-data';
