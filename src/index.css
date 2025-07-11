@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fira+Code:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gray-900 text-cyan-100 font-mono;
+    background-image: 
+      radial-gradient(circle at 25% 25%, #1e40af 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, #7c3aed 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .cyber-border {
+    @apply border border-cyan-400 bg-gray-900/80 backdrop-blur-sm;
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+  }
+  
+  .cyber-button {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-2 px-4 rounded-lg;
+    @apply hover:from-cyan-400 hover:to-blue-400 transition-all duration-300;
+    @apply shadow-lg hover:shadow-cyan-500/50;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+  }
+  
+  .cyber-input {
+    @apply bg-gray-800/50 border border-cyan-400 text-cyan-100 rounded-lg px-3 py-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent;
+    @apply placeholder-cyan-300/50;
+  }
+  
+  .neon-text {
+    @apply text-cyan-400;
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .danger-text {
+    @apply text-red-400;
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .success-text {
+    @apply text-green-400;
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .warning-text {
+    @apply text-yellow-400;
+    text-shadow: 0 0 10px currentColor;
+  }
+}
