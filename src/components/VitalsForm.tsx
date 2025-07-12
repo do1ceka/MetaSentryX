@@ -17,6 +17,7 @@ export function VitalsForm({ patients, onSubmit, onCancel }: VitalsFormProps) {
     temperature: '',
     oxygen_saturation: '',
     recorded_by: '1', // Current doctor ID
+    notes: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -30,10 +31,11 @@ export function VitalsForm({ patients, onSubmit, onCancel }: VitalsFormProps) {
       temperature: parseFloat(formData.temperature),
       oxygen_saturation: parseInt(formData.oxygen_saturation),
       recorded_by: formData.recorded_by,
+      notes: formData.notes,
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -160,6 +162,19 @@ export function VitalsForm({ patients, onSubmit, onCancel }: VitalsFormProps) {
             min="70"
             max="100"
             required
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-cyan-300 mb-2">
+            Notes (Optional)
+          </label>
+          <textarea
+            name="notes"
+            value={formData.notes}
+            onChange={handleChange}
+            className="cyber-input w-full h-20 resize-none"
+            placeholder="Additional observations or notes..."
           />
         </div>
 
